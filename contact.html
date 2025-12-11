@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio — Contact</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container navbar">
+      <div class="brand">Angie Lee Concepcion</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="education.html">Education</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <input class="menu-toggle" id="menuToggle" type="checkbox" />
+      <label for="menuToggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <div class="mobile-panel">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="education.html">Education</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 class="sec-title">Contact</h1>
+
+        <div class="edu-vertical">
+
+          <div class="edu-card">
+            <div class="edu-title">
+              <span>Mobile</span>
+              <span class="edu-icon">📱</span>
+            </div>
+            <p class="edu-school">09053131050</p>
+          </div>
+
+          <div class="edu-card">
+            <div class="edu-title">
+              <span>Email</span>
+              <span class="edu-icon">✉️</span>
+            </div>
+            <p class="edu-school">concepcion.angielee@gmail.com</p>
+          </div>
+
+          <div class="edu-card">
+            <div class="edu-title">
+              <span>Facebook</span>
+              <span class="edu-icon">🌐</span>
+            </div>
+            <p class="edu-school">
+              <a href="https://www.facebook.com/itsangie08/" target="_blank">itsangie08</a>
+            </p>
+          </div>
+
+          <div class="edu-card">
+            <div class="edu-title">
+              <span>LinkedIn</span>
+              <span class="edu-icon">💼</span>
+            </div>
+            <p class="edu-school">
+              <a href="https://www.linkedin.com/in/angie-lee-concepcion-40241037a/" target="_blank">angie-lee-concepcion-40241037a</a>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      © 2025 Angie Lee Oyam Concepcion
+    </footer>
+  </main>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobilePanel = document.querySelector('.mobile-panel');
+
+    menuToggle.addEventListener('change', () => {
+      if(menuToggle.checked){
+        mobilePanel.style.display = 'block';
+      } else {
+        mobilePanel.style.display = 'none';
+      }
+    });
+
+    document.querySelectorAll('.mobile-panel a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.checked = false;
+        mobilePanel.style.display = 'none';
+      });
+    });
+  </script>
+
+</body>
+</html>

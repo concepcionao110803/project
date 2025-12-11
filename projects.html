@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio — Projects</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container navbar">
+      <div class="brand">Angie Lee Concepcion</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="education.html">Education</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <input class="menu-toggle" id="menuToggle" type="checkbox" />
+      <label for="menuToggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <div class="mobile-panel">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="education.html">Education</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 class="sec-title">Projects Gallery</h1>
+        <div class="projects-grid">
+
+        <article class="project-card">
+          <img src="assets/img/color-picker.jpg" alt="Color Picker App">
+          <div class="project-icon">🎨</div>
+          <h3>Color Picker App</h3>
+          <p>A simple app to pick colors and see their hex/RGB values. Built with HTML, CSS & JS.</p>
+          <div class="project-buttons">
+            <a href="https://concepcionao110803.github.io/assignments/Color%20Picker%20App/index.html" target="_blank" class="btn">Live Demo</a>
+            <a href="https://github.com/concepcionao110803/assignments" target="_blank" class="btn">View Code</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="assets/img/task-manager.jpg" alt="Mini To-Do App">
+          <div class="project-icon">📝</div>
+          <h3>Mini To-Do App</h3>
+          <p>A small task manager app to add, mark, and delete tasks. Built with HTML, CSS & JS.</p>
+          <div class="project-buttons">
+            <a href="https://concepcionao110803.github.io/assignments/Task%20Manager/index.html" target="_blank" class="btn">Live Demo</a>
+            <a href="https://github.com/concepcionao110803/assignments" target="_blank" class="btn">View Code</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="assets/img/simple-calculator.jpg" alt="Simple Calculator">
+          <div class="project-icon">🧮</div>
+          <h3>Simple Calculator</h3>
+          <p>A basic calculator with addition, subtraction, multiplication, and division. Built with HTML, CSS & JS.</p>
+          <div class="project-buttons">
+            <a href="https://concepcionao110803.github.io/assignments/Simple%20Calculator/index.html" target="_blank" class="btn">Live Demo</a>
+            <a href="https://github.com/concepcionao110803/assignments" target="_blank" class="btn">View Code</a>
+          </div>
+        </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobilePanel = document.querySelector('.mobile-panel');
+
+    menuToggle.addEventListener('change', () => {
+      if(menuToggle.checked){
+        mobilePanel.style.display = 'block';
+      } else {
+        mobilePanel.style.display = 'none';
+      }
+    });
+
+    document.querySelectorAll('.mobile-panel a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.checked = false;
+        mobilePanel.style.display = 'none';
+      });
+    });
+  </script>
+
+</body>
+</html>
